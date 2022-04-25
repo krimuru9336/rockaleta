@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="htttp://thymeleaf.org">
+
+<head>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script>
+	// Open the Modal
+	function openModal() {
+		document.getElementById("myModal").style.display = "block";
+	}
+
+	// Close the Modal
+	function closeModal() {
+		document.getElementById("myModal").style.display = "none";
+	}
+
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	// Next/previous controls
+	function plusSlides(n) {
+		showSlides(slideIndex += n);
+	}
+
+	// Thumbnail image controls
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("demo");
+		var captionText = document.getElementById("caption");
+		if (n > slides.length) {
+			slideIndex = 1
+		}
+		if (n < 1) {
+			slideIndex = slides.length
+		}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex - 1].style.display = "block";
+		dots[slideIndex - 1].className += " active";
+		captionText.innerHTML = dots[slideIndex - 1].alt;
+	}
+</script>
+
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Rockaleta</title>
+</head>
+
+<body>
+
+	<!-- ======= Header ======= -->
+	<header id="header"
+		class="fixed-top d-flex align-items-center header-transparent">
+
+		<nav class="navbar navbar-fixed-top">
+			<div class="container-fluid">
+
+				<ul class="nav navbar-nav" style="display: flex;">
+					<li><a class="navbar-brand" href="#"> <img
+							src="images/logo.jpg" class="logo" alt="Ruf Kri an!">
+					</a></li>
+					<li><a href="#gallery">Gallarie</a></li>
+					<li><a href="#band-members">Band Members</a></li>
+					<li><a href="#contact">Kontak</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- ======= Header ======= -->
+	</header>
+
+
+	<!-- ======= Carousel Section ======= -->
+	<section id="carousel">
+
+		<div class="container">
+
+
+
+
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<div class="carousel-image"
+							style="background: url(images/carousel/img1.jpg);">
+							<div class="banner">
+								<div class="row">
+									<h1 style="margin-top: 50vh;">Rockaleta</h1>
+									<h1>Die schärfste Partyband der Rhön</h1>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="item">
+						<div class="carousel-image"
+							style="background: url(images/carousel/img2.jpg);"></div>
+					</div>
+
+					<div class="item">
+						<div class="carousel-image"
+							style="background: url(images/carousel/img3.jpg);"></div>
+					</div>
+				</div>
+
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel"
+					data-slide="prev"> <span
+					class="glyphicon glyphicon-chevron-left"></span> <span
+					class="sr-only">Previous</span>
+				</a> <a class="right carousel-control" href="#myCarousel"
+					data-slide="next"> <span
+					class="glyphicon glyphicon-chevron-right"></span> <span
+					class="sr-only">Next</span>
+				</a>
+			</div>
+
+		</div>
+	</section>
+
+	<main id="main">
+
+		<!-- ======= About Section ======= -->
+		<section id="about">
+
+			<div class="container">
+				<h1 class="title-text">About Us</h1>
+			</div>
+			<div class="container-fluid">
+
+				<div class="row">
+
+					<div class="col-md-6">
+						<div class="about-image">
+							<img class="card-img-top about-image"
+								src="images/about-image.jpg" alt="Card image cap">
+						</div>
+					</div>
+
+					<div class="col-md-6">
+
+						<div class="content">
+							<h2>Rockaleta</h2>
+							<h3>Die schärfste Partyband der Rhön</h3>
+							<p>das sind Patrick und Sophia am Mikrofon, Bootzi (oder
+								Sebastian) an der Gitarre, Lisa am Stage-Piano sowie Keyboard
+								und natürlich die Männer für den Rhythmus mit Sebastian am
+								Schlagzeug und Thomas am Bass</p>
+
+							<p>Wir sind zwar neu, aber schon lange keine Neulinge mehr,
+								wenn es um’s Musik machen geht. Mit einer Mischung aus guter
+								alter Tanzmusik, den besten Partykrachern und einer Prise „Rock“
+								wollen wir Eure Kirmes, Karneval, Feuerwehrfest oder was auch
+								immer für einen Anlass der nach guter Stimmung schreit,
+								beschallen.</p>
+
+							<p>Technisch unterstützt in Ton und Licht werden wir dabei
+								von „MB Musik Veranstaltungstechnik“.</p>
+
+							<p>Wenn Ihr neugierig geworden seid, schreibt uns einfach auf
+								Facebook an!</p>
+
+							<p>Wir freuen uns auf Euch</p>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+		<!-- ======= Gallery Section ======= -->
+		<section id="gallery">
+
+			<div class="container">
+
+				<h1 class="title-text">Gallery</h1>
+
+				<!-- Tabs navs -->
+				<div class="container">
+
+					<div class="gallery-tab">
+
+						<ul class="nav nav-pills">
+							<li class="active"><a href="#1a" data-toggle="tab">Urnhausen</a>
+							</li>
+							<li><a href="#2a" data-toggle="tab">Schleid</a></li>
+							<li><a href="#3a" data-toggle="tab">Motzlar</a></li>
+							<li><a href="#4a" data-toggle="tab">Kirmes</a></li>
+						</ul>
+					</div>
+					<div class="tab-content clearfix">
+						<div class="tab-pane active" id="1a">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-3">
+										<img class="card-img-top gallery-img"
+											src="images/urnshausen/img1.jpg" alt="Card image cap">
+									</div>
+
+									<div class="col-md-3">
+										<img class="card-img-top gallery-img"
+											src="images/urnshausen/img2.jpg" alt="Card image cap">
+									</div>
+
+									<div class="col-md-3">
+										<img class="card-img-top gallery-img"
+											src="images/urnshausen/img3.jpg" alt="Card image cap">
+									</div>
+
+									<div class="col-md-3">
+										<img class="card-img-top gallery-img"
+											src="images/urnshausen/img4.jpg" alt="Card image cap">
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="2a">
+
+							
+						</div>
+						<div class="tab-pane" id="3a">
+							<img class="card-img-top band-img" src="images/img3.jpg"
+								alt="Card image cap">
+						</div>
+						<div class="tab-pane" id="4a">
+							<img class="card-img-top band-img" src="images/img4.jpg"
+								alt="Card image cap">
+							<!-- Tabs content -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<!-- ======= Band Members Section ======= -->
+		<section id="band-members">
+			<div class="container">
+				<h1 class="title-text">Band Members</h1>
+			</div>
+			<div class="container" >
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top band-img" src="images/img1.jpg"
+								alt="Card image cap">
+							<div class="card-body">
+								<h4>Thomas</h4>
+								<p class="card-text">Bass Guitarriste</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top band-img" src="images/img1.jpg"
+								alt="Card image cap">
+							<div class="card-body">
+								<h4>Seb</h4>
+								<p class="card-text">Drummer</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top band-img" src="images/img1.jpg"
+								alt="Card image cap">
+							<div class="card-body">
+								<h4>Lisa</h4>
+								<p class="card-text">Klavier</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+
+					<div class="col-md-4">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top band-img" src="images/img1.jpg"
+								alt="Card image cap">
+							<div class="card-body">
+								<h4>Booze</h4>
+								<p class="card-text">Guitarriste</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top band-img" src="images/img1.jpg"
+								alt="Card image cap">
+							<div class="card-body">
+								<h4>Bennylump</h4>
+								<p class="card-text">Guitarriste</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top band-img" src="images/img1.jpg"
+								alt="Card image cap">
+							<div class="card-body">
+								<h4>Theresa</h4>
+								<p class="card-text">Klavier</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top band-img" src="images/img1.jpg"
+								alt="Card image cap">
+							<div class="card-body">
+								<h4>Sofia</h4>
+								<p class="card-text">Singerin</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top band-img" src="images/img1.jpg"
+								alt="Card image cap">
+							<div class="card-body">
+								<h4>Patrick</h4>
+								<p class="card-text">Singer</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top band-img" src="images/img1.jpg"
+								alt="Card image cap">
+							<div class="card-body">
+								<h4>Kri</h4>
+								<p class="card-text">
+									Photographerin <br /> Internet Site Creator and Manager
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="contact">
+
+			<div class="container">
+				<h1 class="title-text">Kontakt</h1>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+
+						<div class="container">
+							<form class="form-horizontal" action="#"
+								th:action="@{/saveContactForm}" th:object="${contactForm}"
+								method="post">
+								<div class="form-group">
+									<label class="control-label col-md-1" for="name"><p>Name:</p></label>
+									<div class="col-md-4">
+										<input class="input-box" type="text"
+											th:field="*{requestorName}" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-1" for="email"><p>Email:</p></label>
+									<div class="col-md-4">
+										<input class="input-box" type="text" th:field="*{email}" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-1" for="phone"><p>Kontakt:</p></label>
+									<div class="col-md-4">
+										<input class="input-box" type="text" th:field="*{phoneNumber}" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-1" for="notes"><p>Notes:</p></label>
+									<div class="col-md-4">
+										<input class="input-box" type="text" th:field="*{notes}" />
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="col-md-3">
+										<div class="checkbox">
+											<p>
+												<label><input type="checkbox" name="isTermsAgreed">
+													I agree to the Terms and Conditions</label>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-offset-1 col-md-4">
+										<button type="submit" class="btn btn-default">Submit</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="col-md-6" id="contact-icons">
+						<div class="containter">
+							<div class="row">
+								<div class="col-md-2">
+									<i class="fa fa-facebook-f"></i>
+								</div>
+								<div class="col-md-2">
+									<i class="fa fa-envelope"></i>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-2">
+									<i class="fa fa-instagram"></i>
+								</div>
+								<div class="col-md-2">
+									<i class="fa fa-phone"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+	<!-- ======= Footer Section ======= -->
+
+
+
+</body>
+</html>
