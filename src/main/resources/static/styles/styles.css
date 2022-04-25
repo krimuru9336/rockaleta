@@ -12,6 +12,7 @@ body, .navbar, .nav, .navbar-nav, a, .tab-content {
 	background-color: black;
 	color: white;
 	font-family: straightFont;
+	font-size: 3vh;
 }
 
 body {
