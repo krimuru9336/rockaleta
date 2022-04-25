@@ -1,6 +1,17 @@
+@font-face {
+	font-family: curvyFont;
+	src: url("fonts/Akaya_Kanadaka/AkayaKanadaka-Regular.ttf");
+}
+
+@font-face {
+	font-family: straightFont;
+	src: url("fonts/Nunito/Nunito-Light.ttf");
+}
+
 body, .navbar, .nav, .navbar-nav, a, .tab-content {
 	background-color: black;
 	color: white;
+	font-family: straightFont;
 }
 
 body {
@@ -8,7 +19,12 @@ body {
 }
 
 h1, h2, h3, h4 {
+	font-family: curvyFont;
 	text-align: center;
+}
+
+p {
+	font-size: 3vh;
 }
 
 .title-text {
@@ -51,6 +67,7 @@ h1, h2, h3, h4 {
 .band-img {
 	height: 30vh;
 	width: 30vh;
+	border-radius: 10%;
 }
 
 .card {

@@ -1,0 +1,36 @@
+.rounded-icon {
+	padding: 7px;
+	font-size: 30px;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+}
+
+.fa {
+	background-color: black;
+}
+.fa:hover {
+	opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+	background: #3B5998;
+	color: white;
+}
+
+.fa-youtube-play {
+	background: white;
+	color: red;
+}
+
+.fa.fa-instagram {
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,
+		#d6249f 60%, #285AEB 90%);
+	background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%,
+		#fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
