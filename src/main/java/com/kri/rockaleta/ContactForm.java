@@ -11,7 +11,7 @@ public class ContactForm {
 	private int id;
 	private String requestorName;
 	private String email;
-	private long phoneNumber;
+	private String phoneNumber;
 	private String notes;
 	
 	public int getId() {
@@ -33,10 +33,10 @@ public class ContactForm {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public long getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-	public void setPhoneNumber(long phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	public String getNotes() {

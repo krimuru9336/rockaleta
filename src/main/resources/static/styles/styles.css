@@ -8,11 +8,17 @@
 	src: url("fonts/Nunito/Nunito-Light.ttf");
 }
 
-body, .navbar, .nav, .navbar-nav, a, .tab-content {
+body, .navbar, .nav, .navbar-nav, .tab-content {
 	background-color: black;
 	color: white;
 	font-family: straightFont;
 	font-size: 3vh;
+}
+
+a, li {
+	background-color: black;
+	color: white;
+	font-family: straightFont;
 }
 
 body {
@@ -28,8 +34,9 @@ p {
 	font-size: 3vh;
 }
 
-a:hover {
-	color: red;
+a, .col-md-4, .col-md-3, .col-md-2 {
+	padding: 0px;
+	margin: 0px;
 }
 
 #particles-js {
@@ -74,6 +81,16 @@ a:hover {
 .gallery-img {
 	height: 40vh;
 	width: 40vh;
+	z-index: 2;
+}
+
+.gallery-video {
+	height: 40vh;
+	width: 40vh;
+}
+
+.tab-pane {
+	z-index: 2;
 }
 
 .band-img {

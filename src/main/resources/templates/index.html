@@ -45,7 +45,7 @@
 			<div class="container-fluid">
 
 				<ul class="nav navbar-nav" style="display: flex;">
-					<li><a class="navbar-brand" href="#"> <img
+					<li><a class="navbar-brand" href="index.html"> <img
 							src="images/logo.jpg" class="logo" alt="Ruf Kri an!">
 					</a></li>
 					<li><a href="#gallery">Gallarie</a></li>
@@ -192,41 +192,42 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-md-3">
-										<img class="card-img-top gallery-img"
-											src="images/urnshausen/img1.jpg" alt="Card image cap">
+
+										<img src="images/urnshausen/img1.jpg"
+											onclick="openModal();currentSlide(1)"
+											class="hover-shadow card-img-top gallery-img">
 									</div>
 
 									<div class="col-md-3">
-										<img class="card-img-top gallery-img"
-											src="images/urnshausen/img2.jpg" alt="Card image cap">
+										<img src="images/urnshausen/img2.jpg"
+											onclick="openModal();currentSlide(2)"
+											class="hover-shadow card-img-top gallery-img">
 									</div>
 
 									<div class="col-md-3">
-										<img class="card-img-top gallery-img"
-											src="images/urnshausen/img3.jpg" alt="Card image cap">
+										<img src="images/urnshausen/img3.jpg"
+											onclick="openModal();currentSlide(3)"
+											class="hover-shadow card-img-top gallery-img">
 									</div>
 
 									<div class="col-md-3">
-										<img class="card-img-top gallery-img"
-											src="images/urnshausen/img4.jpg" alt="Card image cap">
+										<img src="images/urnshausen/img4.jpg"
+											onclick="openModal();currentSlide(4)"
+											class="hover-shadow card-img-top gallery-img">
 									</div>
 
 								</div>
-							</div>
-						</div>
-						<div class="tab-pane" id="2a">
-							<!-- Images used to open the lightbox -->
-							<div class="row">
-								<div class="column">
-									<img src="images/img3.jpg"
-										onclick="openModal();currentSlide(1)"
-										class="hover-shadow gallery-img">
+
+								<div class="row">
+									<div class="col-md-3">
+										<div onclick="openModal();currentSlide(5)">
+											<video class="gallery-video" autoplay muted>
+												<source src="images/urnshausen/vid1.mp4" type="video/mp4">
+											</video>
+										</div>
+									</div>
 								</div>
-								<div class="column">
-									<img src="images/img4.jpg"
-										onclick="openModal();currentSlide(2)"
-										class="hover-shadow gallery-img">
-								</div>
+
 
 							</div>
 
@@ -238,12 +239,30 @@
 
 									<div class="mySlides">
 										<div class="numbertext">1 / 4</div>
-										<img src="images/img3.jpg" class="modal-img">
+										<img src="images/urnshausen/img1.jpg" class="modal-img">
 									</div>
 
 									<div class="mySlides">
 										<div class="numbertext">2 / 4</div>
-										<img src="images/img4.jpg" class="modal-img">
+										<img src="images/urnshausen/img2.jpg" class="modal-img">
+									</div>
+
+									<div class="mySlides">
+										<div class="numbertext">3 / 4</div>
+										<img src="images/urnshausen/img3.jpg" class="modal-img">
+									</div>
+
+									<div class="mySlides">
+										<div class="numbertext">4 / 4</div>
+										<img src="images/urnshausen/img4.jpg" class="modal-img">
+									</div>
+
+									<div class="mySlides">
+										<div class="numbertext">5 / 4</div>
+										<video height="500" autoplay controls>
+											<source src="images/urnshausen/vid1.mp4" type="video/mp4"
+												class="modal-img">
+										</video>
 									</div>
 
 
@@ -251,22 +270,43 @@
 									<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a
 										class="next" onclick="plusSlides(1)">&#10095;</a>
 
-									<!-- Caption text -->
-									<div class="caption-container">
-										<p id="caption"></p>
-									</div>
-
 									<!-- Thumbnail image controls -->
 
-									<div class="column">
-										<img class="demo" src="images/img3.jpg"
-											onclick="currentSlide(1)" alt="Mountains">
+									<div class="col-md-3">
+										<img class="demo" src="images/urnshausen/img1.jpg"
+											onclick="currentSlide(1)">
 									</div>
 
-									<div class="column">
-										<img class="demo" src="images/img4.jpg"
-											onclick="currentSlide(2)" alt="Lights">
+									<div class="col-md-3">
+										<img class="demo" src="images/urnshausen/img2.jpg"
+											onclick="currentSlide(2)">
 									</div>
+
+									<div class="col-md-3">
+										<img class="demo" src="images/urnshausen/img3.jpg"
+											onclick="currentSlide(3)">
+									</div>
+
+									<div class="col-md-3">
+										<img class="demo" src="images/urnshausen/img4.jpg"
+											onclick="currentSlide(4)">
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="tab-pane" id="2a">
+							<!-- Images used to open the lightbox -->
+							<div class="row">
+								<div class="col-md-3">
+									<img src="images/img3.jpg"
+										onclick="openModal();currentSlide(1)"
+										class="hover-shadow card-img-top gallery-img">
+								</div>
+								<div class="col-md-3">
+									<img src="images/img4.jpg"
+										onclick="openModal();currentSlide(2)"
+										class="hover-shadow card-img-top gallery-img">
 								</div>
 							</div>
 						</div>
@@ -283,6 +323,7 @@
 				</div>
 			</div>
 		</section>
+
 
 
 
@@ -467,10 +508,16 @@
 										class="fa fa-facebook rounded-icon"></i></a>
 								</div>
 								<div class="col-md-2">
-									<i class="fa fa-instagram rounded-icon"></i>
+									<a target="_blank"
+										href="https://www.facebook.com/Rockaleta-Die-Partyband-2280649342206833">
+										<i class="fa fa-instagram rounded-icon"></i>
+									</a>
 								</div>
 								<div class="col-md-2">
-									<i class="fa fa-brands fa-youtube-play"></i>
+									<a target="_blank"
+										href="https://www.facebook.com/Rockaleta-Die-Partyband-2280649342206833">
+										<i class="fa fa-brands fa-youtube-play rounded-icon"></i>
+									</a>
 								</div>
 							</div>
 						</div>

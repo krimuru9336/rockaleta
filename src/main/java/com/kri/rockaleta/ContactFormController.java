@@ -34,7 +34,7 @@ public class ContactFormController {
 		return "redirect:/#contact";
 	}
 
-	private void sendEmailFromContactFormData(String requestorName, String email, long phoneNumber, String notes) {
+	private void sendEmailFromContactFormData(String requestorName, String email, String phoneNumber, String notes) {
 		String emailBody = "Name: " + requestorName + "\n Email: " + email + "\n Phone Number: " + phoneNumber
 				+ "\n Notes: " + notes;
 		

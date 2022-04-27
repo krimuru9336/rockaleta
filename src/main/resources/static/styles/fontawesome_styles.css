@@ -1,6 +1,6 @@
 .rounded-icon {
-	padding: 7px;
-	font-size: 30px;
+	font-size: 3vh;
+	padding-top: 1.3vh;
 	width: 60px;
 	height: 60px;
 	text-align: center;
@@ -11,6 +11,7 @@
 .fa {
 	background-color: black;
 }
+
 .fa:hover {
 	opacity: 0.7;
 }
@@ -21,10 +22,10 @@
 .fa-facebook {
 	background: #3B5998;
 	color: white;
+	font-size: 3vh;
 }
 
 .fa-youtube-play {
-	background: white;
 	color: red;
 }
 
