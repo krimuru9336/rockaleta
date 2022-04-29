@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="styles/styles.css">
 <link rel="stylesheet" href="styles/modal_styles.css">
 <link rel="stylesheet" href="styles/fontawesome_styles.css">
+<link rel="stylesheet" href="styles/button_styles.css">
 
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -48,9 +49,10 @@
 					<li><a class="navbar-brand" href="index.html"> <img
 							src="images/logo.jpg" class="logo" alt="Ruf Kri an!">
 					</a></li>
-					<li><a href="#gallery">Gallarie</a></li>
-					<li><a href="#band-members">Band Members</a></li>
-					<li><a href="#contact">Kontak</a></li>
+					<li><a class="glow-on-hover" href="#gallery">Gallarie</a></li>
+					<li><a class="glow-on-hover" href="#band-members">Band
+							Members</a></li>
+					<li><a class="glow-on-hover" href="#contact">Kontak</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -180,9 +182,10 @@
 					<div class="gallery-tab">
 
 						<ul class="nav nav-pills">
-							<li class="active"><a href="#1a" class="tab-link"
-								data-toggle="tab">Urnshausen</a></li>
-							<li><a href="#2a" data-toggle="tab">Flori, Eva, Marcus</a></li>
+							<li class="active"><a href="#1a"
+								class="tab-link glow-on-hover" data-toggle="tab">Urnshausen</a></li>
+							<li><a href="#2a" class="glow-on-hover" data-toggle="tab">Flori,
+									Eva, Marcus</a></li>
 
 						</ul>
 					</div>
@@ -476,36 +479,39 @@
 								<div class="row form-row">
 									<div class="col-md-2">Name:</div>
 									<div class="col-md-6">
-										<input class="input-box" type="text"
-											th:field="*{requestorName}" />
+										<input class="input-box" type="text" autocomplete="off"
+											th:field="*{requestorName}" required />
 									</div>
 								</div>
 								<div class="row form-row">
 									<div class="col-md-2">Email:</div>
 									<div class="col-md-6">
-										<input class="input-box" type="text" th:field="*{email}" />
+										<input class="input-box" type="text" autocomplete="off"
+											th:field="*{email}" required />
 									</div>
 								</div>
 								<div class="row form-row">
 									<div class="col-md-2">Kontakt:</div>
 									<div class="col-md-6">
-										<input class="input-box" type="text" th:field="*{phoneNumber}" />
+										<input class="input-box" type="text" autocomplete="off"
+											th:field="*{phoneNumber}" required />
 									</div>
 								</div>
 								<div class="row form-row">
 									<div class="col-md-2">Notes:</div>
 									<div class="col-md-6">
-										<input class="input-box" type="text" th:field="*{notes}" />
+										<input class="input-box" type="text" autocomplete="off"
+											th:field="*{notes}" />
 									</div>
 								</div>
 								<div class="row form-row">
-									<label><input type="checkbox" name="isTermsAgreed">
-										I agree to the Terms and Conditions</label>
+									<label><input type="checkbox" name="isTermsAgreed"
+										required /> I agree to the Terms and Conditions</label>
 								</div>
 								<div class="row form-row">
 									<div class="col-md-4"></div>
 									<div class="col-md-2">
-										<button type="submit" class="btn submit-button">Submit</button>
+										<button type="submit" class="btn submit-button glow-on-hover">Submit</button>
 									</div>
 								</div>
 							</form>
