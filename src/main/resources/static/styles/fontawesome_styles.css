@@ -1,11 +1,15 @@
 .rounded-icon {
 	font-size: 3vh;
 	padding-top: 1.3vh;
-	width: 60px;
-	height: 60px;
+	width: 10vh;
+	height: 10vh;
 	text-align: center;
 	text-decoration: none;
 	border-radius: 50%;
+}
+
+.icon {
+	margin: 3vh;
 }
 
 .fa {

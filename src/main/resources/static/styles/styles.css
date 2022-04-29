@@ -34,7 +34,7 @@ p {
 	font-size: 3vh;
 }
 
-a, .col-md-4, .col-md-3, .col-md-2 {
+a, .col-md-6, .col-md-4, .col-md-3, .col-md-2 {
 	padding: 0px;
 	margin: 0px;
 }
@@ -53,6 +53,10 @@ a, .col-md-4, .col-md-3, .col-md-2 {
 
 .logo {
 	margin-top: -15px;
+}
+
+.tab-link {
+	background-color: black;
 }
 
 .banner {
@@ -99,6 +103,10 @@ a, .col-md-4, .col-md-3, .col-md-2 {
 	border-radius: 10%;
 }
 
+.band-col {
+	margin: auto;
+	display: flex;
+}
 .card {
 	margin-top: 9vh;
 	text-align: center;
@@ -112,6 +120,14 @@ input {
 .input-box {
 	background-color: black;
 	border-bottom: 3px solid red;
+}
+
+.form-row {
+	margin-top: 3vh;
+}
+
+.icon-row {
+	display: flex;
 }
 
 .place-button {
@@ -135,4 +151,10 @@ input {
 .col-centered {
 	float: none;
 	margin: 0 auto;
+}
+
+.center-block {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
 }
