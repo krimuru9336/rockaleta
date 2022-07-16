@@ -15,7 +15,7 @@ body, .navbar, .nav, .navbar-nav, .tab-content {
 	font-size: 3vh;
 }
 
-a, li, a:hover {
+a, li {
 	background-color: black;
 	color: white;
 	font-family: straightFont;
@@ -72,7 +72,7 @@ a, .col-md-6, .col-md-4, .col-md-3, .col-md-2 {
 	margin-top: 6vh;
 	display: flex;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto;	
 }
 
 .carousel-image {
