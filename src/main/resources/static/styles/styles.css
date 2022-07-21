@@ -94,6 +94,7 @@ a, .col-md-6, .col-md-4, .col-md-3, .col-md-2 {
 }
 
 .gallery-thumbnail{
+	margin: 3vh;
 	float: left;
     width:  30vh;
     height: 30vh;
