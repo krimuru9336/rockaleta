@@ -72,7 +72,11 @@ a, .col-md-6, .col-md-4, .col-md-3, .col-md-2 {
 	margin-top: 6vh;
 	display: flex;
 	margin-left: auto;
-	margin-right: auto;	
+	margin-right: auto;
+}
+
+.carousel-container-top-margin {
+	margin-top: 15vh;
 }
 
 .carousel-image {

@@ -3,35 +3,45 @@
 
 <head>
 
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
 <!-- jQuery library -->
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
 <script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
 
 <link rel="stylesheet" href="styles/styles.css">
-<link rel="stylesheet" href="styles/modal_styles.css">
 <link rel="stylesheet" href="styles/fontawesome_styles.css">
-<link rel="stylesheet" href="styles/button_styles.css">
-
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta name="viewport" content="width=device-width initial-scale=1.0" />
 
 <title>Rockaleta</title>
 
 </head>
 
 <body>
+
+	<!-- ======= Particle JS ======= -->
 
 	<div class="home-area" id="particles-js"></div>
 	<script type="text/javascript"
@@ -41,77 +51,67 @@
 	<!-- ======= Header ======= -->
 	<header id="header"
 		class="fixed-top d-flex align-items-center header-transparent">
+		<nav class="navbar navbar-expand-md navbar-dark">
+			<!-- Brand -->
+			<a class="navbar-brand" href="#"><img src="images/logo.jpg"
+				class="logo" alt="Ruf Kri an!"></a>
 
-		<nav class="navbar navbar-fixed-top">
-			<div class="container-fluid">
+			<!-- Toggler/collapsibe Button -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-				<ul class="nav navbar-nav" style="display: flex;">
-					<li><a class="navbar-brand" href="index.html"> <img
-							src="images/logo.jpg" class="logo" alt="Ruf Kri an!">
-					</a></li>
-					<li><a class="glow-on-hover" href="#gallery">Gallarie</a></li>
-					<li><a class="glow-on-hover" href="#band-members">Band
-							Members</a></li>
-					<li><a class="glow-on-hover" href="#contact">Kontak</a></li>
+			<!-- Navbar links -->
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item glow-on-hover"><a class="nav-link"
+						href="#gallery">Gallery</a></li>
+					<li class="nav-item glow-on-hover"><a class="nav-link"
+						href="#band-members">Band Members</a></li>
+					<li class="nav-item glow-on-hover"><a class="nav-link"
+						href="#contact">Contact</a></li>
 				</ul>
 			</div>
 		</nav>
-		<!-- ======= Header ======= -->
+
 	</header>
 
+	<!-- ======= Header ======= -->
 
 	<!-- ======= Carousel Section ======= -->
 	<section id="carousel">
 
-		<div class="container">
+		<div class="container-fluid">
 
-			<div id="myCarousel" class="carousel slide" data-ride="carousel">
-				<!-- Indicators -->
-				<ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-					<li data-target="#myCarousel" data-slide-to="2"></li>
-				</ol>
-
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner" style="margin-top: 10vh;">
-					<div class="item active">
-						<div class="carousel-image">
-							<img src="images/carousel/img1.jpg" class="img-thumbnail">
-							<!--	<div class="banner">
-								<div class="row">
-									<h1>Rockaleta</h1>
-									<h1>Die schÃ¤rfste Partyband der RhÃ¶n</h1>
-								</div>
-							</div>  -->
+			<div id="rockaletaCarousel" class="carousel slide"
+				data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-container-top-margin">
+						<div class="carousel-item active">
+							<img class="img-fluid" src="images/carousel/img1.jpg"
+								alt="First slide">
 						</div>
-
-					</div>
-					<div class="item">
-						<div class="carousel-image">
-							<img src="images/carousel/img2.jpg" class="img-thumbnail">
+						<div class="carousel-item">
+							<img class="img-fluid" src="images/carousel/img2.jpg"
+								alt="Second slide">
 						</div>
-					</div>
-
-					<div class="item">
-						<div class="carousel-image">
-							<img src="images/carousel/img3.jpg" class="img-thumbnail">
+						<div class="carousel-item">
+							<img class="img-fluid" src="images/carousel/img3.jpg"
+								alt="Third slide">
 						</div>
 					</div>
 				</div>
-
-				<!-- Left and right controls -->
-				<a class="left carousel-control" href="#myCarousel"
-					data-slide="prev"> <span
-					class="glyphicon glyphicon-chevron-left"></span> <span
+				<a class="carousel-control-prev" href="#rockaletaCarousel"
+					role="button" data-slide="prev"> <span
+					class="carousel-control-prev-icon" aria-hidden="true"></span> <span
 					class="sr-only">Previous</span>
-				</a> <a class="right carousel-control" href="#myCarousel"
-					data-slide="next"> <span
-					class="glyphicon glyphicon-chevron-right"></span> <span
+				</a> <a class="carousel-control-next" href="#rockaletaCarousel"
+					role="button" data-slide="next"> <span
+					class="carousel-control-next-icon" aria-hidden="true"></span> <span
 					class="sr-only">Next</span>
 				</a>
 			</div>
-
 		</div>
 	</section>
 
@@ -127,32 +127,32 @@
 
 				<div class="row">
 
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-12 col-xs-12">
 						<div class="about-image">
 							<img class="card-img-top about-image"
 								src="images/about-image.jpg" alt="Card image cap">
 						</div>
 					</div>
 
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-12 col-xs-12">
 
 						<div class="content">
 							<h2>Rockaleta</h2>
-							<h3>Die schÃ¤rfste Partyband der RhÃ¶n</h3>
+							<h3>Die schärfste Partyband der Rhön</h3>
 							<p>das sind Patrick und Sophia am Mikrofon, Bootzi (oder
 								Sebastian) an der Gitarre, Lisa am Stage-Piano sowie Keyboard
-								und natÃ¼rlich die MÃ¤nner fÃ¼r den Rhythmus mit Sebastian am
+								und natürlich die Männer für den Rhythmus mit Sebastian am
 								Schlagzeug und Thomas am Bass</p>
 
 							<p>Wir sind zwar neu, aber schon lange keine Neulinge mehr,
-								wenn es umâ€™s Musik machen geht. Mit einer Mischung aus guter
-								alter Tanzmusik, den besten Partykrachern und einer Prise â€žRockâ€œ
+								wenn es um’s Musik machen geht. Mit einer Mischung aus guter
+								alter Tanzmusik, den besten Partykrachern und einer Prise „Rock“
 								wollen wir Eure Kirmes, Karneval, Feuerwehrfest oder was auch
-								immer fÃ¼r einen Anlass der nach guter Stimmung schreit,
+								immer für einen Anlass der nach guter Stimmung schreit,
 								beschallen.</p>
 
-							<p>Technisch unterstÃ¼tzt in Ton und Licht werden wir dabei
-								von â€žMB Musik Veranstaltungstechnikâ€œ.</p>
+							<p>Technisch unterstützt in Ton und Licht werden wir dabei
+								von „MB Musik Veranstaltungstechnik“.</p>
 
 							<p>Wenn Ihr neugierig geworden seid, schreibt uns einfach auf
 								Facebook an!</p>
@@ -219,110 +219,6 @@
 
 								</div>
 
-								<div class="row">
-									<div class="col-md-3">
-										<div onclick="openModal();currentSlide(5)">
-											<video class="gallery-video" autoplay muted>
-												<source src="images/urnshausen/vid1.mp4" type="video/mp4">
-											</video>
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div onclick="openModal();currentSlide(6)">
-											<video class="gallery-video" autoplay muted>
-												<source src="images/urnshausen/vid2.mp4" type="video/mp4">
-											</video>
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div onclick="openModal();currentSlide(7)">
-											<video class="gallery-video" autoplay muted>
-												<source src="images/urnshausen/vid3.mp4" type="video/mp4">
-											</video>
-										</div>
-									</div>
-								</div>
-
-
-							</div>
-
-							<!-- The Modal/Lightbox -->
-							<div id="myModal" class="modal">
-								<span class="close cursor" style="opacity: 1;"
-									onclick="closeModal()">&times;</span>
-								<div class="modal-content">
-
-									<div class="mySlides">
-										<div class="numbertext">1 / 7</div>
-										<img src="images/urnshausen/img1.jpg" class="modal-img">
-									</div>
-
-									<div class="mySlides">
-										<div class="numbertext">2 / 7</div>
-										<img src="images/urnshausen/img2.jpg" class="modal-img">
-									</div>
-
-									<div class="mySlides">
-										<div class="numbertext">3 / 7</div>
-										<img src="images/urnshausen/img3.jpg" class="modal-img">
-									</div>
-
-									<div class="mySlides">
-										<div class="numbertext">4 / 7</div>
-										<img src="images/urnshausen/img4.jpg" class="modal-img">
-									</div>
-
-									<div class="mySlides">
-										<div class="numbertext">5 / 7</div>
-										<video height="500" autoplay controls>
-											<source src="images/urnshausen/vid1.mp4" type="video/mp4"
-												class="modal-img">
-										</video>
-									</div>
-
-									<div class="mySlides">
-										<div class="numbertext">6 / 7</div>
-										<video height="500" autoplay controls>
-											<source src="images/urnshausen/vid2.mp4" type="video/mp4"
-												class="modal-img">
-										</video>
-									</div>
-
-									<div class="mySlides">
-										<div class="numbertext">7 / 7</div>
-										<video height="500" autoplay controls>
-											<source src="images/urnshausen/vid3.mp4" type="video/mp4"
-												class="modal-img">
-										</video>
-									</div>
-
-
-									<!-- Next/previous controls -->
-									<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a
-										class="next" onclick="plusSlides(1)">&#10095;</a>
-
-									<!-- Thumbnail image controls -->
-
-									<div class="col-md-3">
-										<img class="demo" src="images/urnshausen/img1.jpg"
-											onclick="currentSlide(1)">
-									</div>
-
-									<div class="col-md-3">
-										<img class="demo" src="images/urnshausen/img2.jpg"
-											onclick="currentSlide(2)">
-									</div>
-
-									<div class="col-md-3">
-										<img class="demo" src="images/urnshausen/img3.jpg"
-											onclick="currentSlide(3)">
-									</div>
-
-									<div class="col-md-3">
-										<img class="demo" src="images/urnshausen/img4.jpg"
-											onclick="currentSlide(4)">
-									</div>
-								</div>
 							</div>
 
 						</div>
@@ -527,9 +423,8 @@
 										class="fa fa-facebook rounded-icon"></i></a>
 								</div>
 								<div class="col-md-2 icon">
-									<a target="_blank"
-										href="#">
-										<i class="fa fa-instagram rounded-icon"></i>
+									<a target="_blank" href="#"> <i
+										class="fa fa-instagram rounded-icon"></i>
 									</a>
 								</div>
 								<div class="col-md-2 icon">
@@ -561,7 +456,7 @@
 				<img src="images/banner.jpg" alt="Card image cap" class="banner">
 			</div>
 			<div class="me-5 d-none d-lg-block">
-				<h1>Die schÃ¤rfste Partyband der RhÃ¶n</h1>
+				<h1>Die schärfste Partyband der Rhön</h1>
 			</div>
 		</section>
 		<!-- Section: Social media -->
@@ -578,10 +473,13 @@
 						<!-- Links -->
 						<h3>Finde Uns</h3>
 						<p>
-							<a href="https://www.youtube.com/channel/UCI1UrvYZBBN_CJ3fw33pFPw" target="_blank" class="footer-link">Youtube</a>
+							<a
+								href="https://www.youtube.com/channel/UCI1UrvYZBBN_CJ3fw33pFPw"
+								target="_blank" class="footer-link">Youtube</a>
 						</p>
 						<p>
-							<a href="https://www.facebook.com/rockaletapartyband/" target="_blank" class="footer-link">Facebook</a>
+							<a href="https://www.facebook.com/rockaletapartyband/"
+								target="_blank" class="footer-link">Facebook</a>
 						</p>
 						<p>
 							<a href="#!" class="footer-link">Instagram</a>
