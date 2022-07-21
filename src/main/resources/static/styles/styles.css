@@ -21,7 +21,7 @@ a, li {
 	font-family: straightFont;
 }
 
-li{
+li {
 	z-index: 3000;
 }
 
@@ -95,39 +95,17 @@ a, .col-md-6, .col-md-4, .col-md-3, .col-md-2 {
 	width: 100%;
 }
 
-.gallery-tab {
-	margin-bottom: 9vh;
-}
-
-.gallery-img {
-	height: 40vh;
-	width: 40vh;
-	z-index: 2;
-}
-
-.gallery-video {
-	height: 40vh;
-	width: 40vh;
-}
-
 .tab-pane {
 	z-index: 2;
 }
 
-.band-img {
-	height: 30vh;
-	width: 30vh;
-	border-radius: 10%;
-}
-
-.band-col {
-	margin: auto;
-	display: flex;
-}
-
 .card {
-	margin-top: 9vh;
-	text-align: center;
+	width: 35vh;
+	margin: 3vh;
+}
+
+.card-body {
+	background-color: black;
 }
 
 input {
