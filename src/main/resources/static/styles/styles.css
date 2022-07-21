@@ -21,6 +21,10 @@ a, li {
 	font-family: straightFont;
 }
 
+li{
+	z-index: 3000;
+}
+
 body {
 	padding: 15px;
 }
