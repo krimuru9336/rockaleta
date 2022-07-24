@@ -15,7 +15,7 @@ body, .navbar, .nav, .navbar-nav, .tab-content {
 	font-size: 3vh;
 }
 
-a, li{
+a, li {
 	background-color: black;
 	color: white;
 	font-family: straightFont;
@@ -93,12 +93,13 @@ a, .col-md-6, .col-md-4, .col-md-3, .col-md-2 {
 	z-index: 2;
 }
 
-.gallery-thumbnail{
+.gallery-thumbnail {
 	margin: 3vh;
 	float: left;
-    width:  30vh;
-    height: 30vh;
-    object-fit: cover;
+	width: 30vh;
+	height: 30vh;
+	object-fit: cover;
+	float: left;
 }
 
 .card {
@@ -106,11 +107,11 @@ a, .col-md-6, .col-md-4, .col-md-3, .col-md-2 {
 	margin: 3vh;
 }
 
-.card-img-top{
+.card-img-top {
 	float: left;
-    width:  35vh;
-    height: 40vh;
-    object-fit: cover;
+	width: 35vh;
+	height: 40vh;
+	object-fit: cover;
 }
 
 .card-body {
@@ -188,4 +189,10 @@ input {
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
+}
+
+.modal-header, .modal-body, .modal-footer {
+	background-color: black;
+	color: white;
+	border: 1px solid white;
 }
