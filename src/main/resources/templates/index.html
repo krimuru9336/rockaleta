@@ -190,45 +190,56 @@
 					<div id="home" class="container tab-pane active">
 						<br />
 
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col col-md-3">
-									<a href="images/urnshausen/img1.jpg" class="fancybox"
-										data-fancybox="gallery1"> <img class="gallery-thumbnail"
-										src="images/urnshausen/img1.jpg">
-									</a>
-								</div>
-								<div class="col col-md-3">
-									<a href="images/urnshausen/img2.jpg" class="fancybox"
-										data-fancybox="gallery1"> <img class="gallery-thumbnail"
-										src="images/urnshausen/img2.jpg">
-									</a>
-								</div>
-								<div class="col col-md-3">
-									<a href="images/urnshausen/img3.jpg" class="fancybox"
-										data-fancybox="gallery1"> <img class="gallery-thumbnail"
-										src="images/urnshausen/img3.jpg">
-									</a>
-								</div>
-								<div class="col col-md-3">
-									<a href="images/urnshausen/img4.jpg" class="fancybox"
-										data-fancybox="gallery1"> <img class="gallery-thumbnail"
-										src="images/urnshausen/img4.jpg">
-									</a>
-								</div>
+						<h3>Photos</h3>
+						<div class="container-fluid" id="urns-container">
 
+							<script type="text/javascript">
+								for (var i = 1; i <= 8; i++) {
+									if (i <= 5) {
 
-							</div>
+										var imgURL = "images/urnshausen/img"
+												+ i + ".jpg"
+
+										if (i % 4 == 1) {
+											var rowElement = document
+													.createElement("div");
+											rowElement.className = "row";
+										}
+
+										var colElement = document
+												.createElement("div");
+										colElement.className = "col col-md-3";
+
+										var anchorElement = document
+												.createElement("a");
+										anchorElement.className = "fancybox";
+										anchorElement.href = imgURL;
+										anchorElement.setAttribute(
+												"data-fancybox", "gallery1");
+
+										var imgElement = document
+												.createElement("img");
+										imgElement.className = "gallery-thumbnail";
+										imgElement.src = imgURL;
+
+										anchorElement.append(imgElement);
+										colElement.append(anchorElement);
+										rowElement.append(colElement);
+										document.getElementById(
+												"urns-container").append(
+												rowElement);
+
+									} else {
+
+									}
+								}
+							</script>
 
 							<br />
 
+							<h3>Videos</h3>
+
 							<div class="row">
-								<div class="col col-md-3">
-									<a href="images/urnshausen/img5.jpg" class="fancybox"
-										data-fancybox="gallery1"> <img class="gallery-thumbnail"
-										src="images/urnshausen/img5.jpg">
-									</a>
-								</div>
 								<div class="col col-md-3">
 									<iframe class="gallery-thumbnail"
 										src="https://www.youtube.com/embed/QgszrxmOJFY"> </iframe>
@@ -295,7 +306,7 @@
 					</div>
 					<div class="col col-md-3">
 						<div class="card">
-							<img class="card-img-top" src="images/bandmembers/thomas.jpg"
+							<img class="card-img-top" src="images/bandmembers/lisa.jpg"
 								alt="Card image" style="width: 100%">
 							<div class="card-body">
 								<h4 class="card-title">Lisa</h4>
@@ -353,10 +364,10 @@
 					</div>
 					<div class="col col-md-3">
 						<div class="card">
-							<img class="card-img-top" src="images/bandmembers/boozi.jpg"
+							<img class="card-img-top" src="images/bandmembers/julius.jpg"
 								alt="Card image" style="width: 100%">
 							<div class="card-body">
-								<h4 class="card-title">Keyboarder2</h4>
+								<h4 class="card-title">Julius</h4>
 								<p class="text-center">Keyboard</p>
 
 							</div>
@@ -375,6 +386,7 @@
 
 			<div class="container-fluid">
 				<div class="row">
+					<div class="col-md-2 col-sm-2 col-xs-2"></div>
 					<div class="col-md-offset-2 col-md-5">
 						<div class="container-fluid">
 							<form action="#" th:action="@{/saveContactForm}"
@@ -423,19 +435,19 @@
 
 					<br /> <br />
 					<div class="col-md-4" id="contact-icons">
-						<div class="containter">
+						<div class="containter-fluid">
 							<div class="row icon-row">
-								<div class="col-md-2 icon">
+								<div class="col-md-2 col-sm-2 col-xs-2 icon">
 									<a target="_blank"
 										href="https://www.facebook.com/Rockaleta-Die-Partyband-2280649342206833"><i
 										class="fa fa-facebook rounded-icon"></i></a>
 								</div>
-								<div class="col-md-2 icon">
+								<div class="col-md-2 col-sm-2 col-xs-2 icon">
 									<a target="_blank" href="#"> <i
 										class="fa fa-instagram rounded-icon"></i>
 									</a>
 								</div>
-								<div class="col-md-2 icon">
+								<div class="col-md-2 col-sm-1 col-xs-2 icon">
 									<a target="_blank"
 										href="https://www.youtube.com/channel/UCI1UrvYZBBN_CJ3fw33pFPw">
 										<i class="fa fa-brands fa-youtube-play rounded-icon"></i>
