@@ -133,10 +133,6 @@ input {
 	margin-top: 3vh;
 }
 
-.icon-row {
-	display: flex;
-}
-
 .place-button {
 	background-color: black;
 	border: 3px solid #fc6b03;
@@ -153,10 +149,6 @@ input {
 
 .submit-button:hover {
 	color: #fc6b03;
-}
-
-#contact-icons {
-	font-size: 8vh;
 }
 
 #footer {

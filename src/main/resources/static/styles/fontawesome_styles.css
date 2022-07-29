@@ -1,15 +1,19 @@
 .rounded-icon {
-	font-size: 3vh;
-	padding-top: 1.3vh;
 	width: 10vh;
 	height: 10vh;
 	text-align: center;
 	text-decoration: none;
 	border-radius: 50%;
+	display: inline-block;
+	text-align: center;
+	vertical-align: bottom;
+	padding-top: 1vh;
 }
 
 .icon {
+	font-size: 8vh;
 	margin: 3vh;
+	z-index: 10;
 }
 
 .fa {
@@ -30,6 +34,7 @@
 }
 
 .fa-youtube-play {
+	background-color: white;
 	color: red;
 }
 
