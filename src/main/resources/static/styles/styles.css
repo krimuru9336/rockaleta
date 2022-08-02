@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
 	font-family: curvyFont;
 	src: url("fonts/Akaya_Kanadaka/AkayaKanadaka-Regular.ttf");
@@ -8,6 +9,7 @@
 	src: url("fonts/Nunito/Nunito-Light.ttf");
 }
 
+/* Basics */
 body, .navbar, .nav, .navbar-nav, .tab-content {
 	background-color: black;
 	color: white;
@@ -17,7 +19,6 @@ body, .navbar, .nav, .navbar-nav, .tab-content {
 
 a:hover {
 	color: white;
-	opacity: 0.7;
 }
 
 a, li {
@@ -29,17 +30,7 @@ a, li {
 li, li.active {
 	background-color: black;
 	color: white;
-	z-index: 1000;
-}
-
-.nav-tabs .nav-link.active {
-	background-color: black;
-	color: white;
-}
-
-.active, .nav-link, .nav-item {
-	background-color: black;
-	color: white;
+	z-index: 2;
 }
 
 body {
@@ -60,6 +51,7 @@ a, .col-md-6, .col-md-4, .col-md-3, .col-md-2 {
 	margin: 0px;
 }
 
+/* Background animation using Particle.js */
 #particles-js {
 	position: fixed;
 	z-index: 0;
@@ -67,46 +59,49 @@ a, .col-md-6, .col-md-4, .col-md-3, .col-md-2 {
 	height: 100%;
 }
 
+/* Title text of each section */
 .title-text {
 	margin-top: 15vh;
 	margin-bottom: 9vh;
 }
 
+/* Logo at top left corner */
 .logo {
 	margin-top: -15px;
 }
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus {
-	background-color: #fc6b03;
-}
-
-.nav-pills>li.active>a:hover, .nav-pills>li>a:hover, .navbar-nav>li>a:hover
-	{
-	background-color: black;
-}
-
-.navbar-brand:hover {
-	background-color: black;
-}
-
+/* Carousel Section*/
 .carousel-container-top-margin {
 	margin-top: 15vh;
 }
 
+/* About Section */
 .about-image {
 	padding: 15px;
 	width: 100%;
 	object-fit: cover;
 }
 
+/* Gallery Section */
+.nav-tabs .nav-link.active {
+	background-color: black;
+	color: white;
+	border: none;
+	border-bottom: 3px solid red;
+	margin-right: 3vh;
+}
+
+.active, .nav-link, .nav-item {
+	background-color: black;
+	color: white;
+	border: none;
+}
+
 a.nav-link:hover {
 	background-color: black;
 	color: red;
 	opacity: 1.0;
-}
-
-.nav-link.active {
-	background-color: red;
+	border: none;
 }
 
 .gallery-tab {
@@ -126,9 +121,11 @@ a.nav-link:hover {
 	float: left;
 }
 
+/* Band Members Section */
 .card {
 	width: 35vh;
 	margin: 3vh;
+	border: 6px solid white;
 }
 
 .card-img-top {
@@ -142,15 +139,10 @@ a.nav-link:hover {
 	background-color: black;
 }
 
-input {
-	outline: none;
-	border: none;
-}
-
+/* Contact Section */
 .form-control {
 	outline: none;
 	border: none;
-	background-color: black;
 }
 
 .notes, .notes:focus {
@@ -162,7 +154,7 @@ input {
 	border-top: 1px solid #fc6b03;
 }
 
-.input-box, textarea, .input-box:focus {
+.input-box, .input-box:focus {
 	color: white;
 	background-color: black;
 	border-bottom: 3px solid #fc6b03;
@@ -172,17 +164,8 @@ input {
 	margin-top: 3vh;
 }
 
-.place-button {
-	background-color: black;
-	border: 3px solid #fc6b03;
-	height: 30vh;
-	width: 30vh;
-	font-size: 6vh;
-}
-
 .submit-button {
 	color: white;
-	background-color: black;
 	border: 3px solid #fc6b03;
 }
 
@@ -194,9 +177,9 @@ input {
 	color: #02ed41;
 }
 
+/* Footer Section */
 #footer {
 	margin-top: 9vh;
-	background-color: black;
 	border-top: 1px solid #fc6b03;
 }
 
@@ -205,10 +188,6 @@ input {
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.footer-link {
-	color: white;
 }
 
 .footer-link:hover {
@@ -220,17 +199,7 @@ input {
 	background-color: #ffbc8c;
 }
 
-.col-centered {
-	float: none;
-	margin: 0 auto;
-}
-
-.center-block {
-	margin-left: auto;
-	margin-right: auto;
-	display: flex;
-}
-
+/* Modals */
 .modal-header, .modal-body, .modal-footer {
 	background-color: black;
 	color: white;

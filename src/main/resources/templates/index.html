@@ -34,6 +34,7 @@
 <link rel="stylesheet" href="styles/fontawesome_styles.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="js/main.js"></script>
 
 <meta name="viewport" content="width=device-width initial-scale=1.0" />
 <META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8" />
@@ -459,75 +460,8 @@
 								<div class="col-md-6">
 									<p class="confirmation-message" th:text="${msg}"></p>
 								</div>
-
-
 							</div>
-
 						</form>
-
-
-
-
-						<script>
-							// Disable form submissions if there are invalid fields
-							(function() {
-								'use strict';
-								window
-										.addEventListener(
-												'load',
-												function() {
-													// Get the forms we want to add validation styles to
-													var forms = document
-															.getElementsByClassName('needs-validation');
-													// Loop over them and prevent submission
-													var validation = Array.prototype.filter
-															.call(
-																	forms,
-																	function(
-																			form) {
-																		form
-																				.addEventListener(
-																						'submit',
-																						function(
-																								event) {
-																							if (form
-																									.checkValidity() === false) {
-																								event
-																										.preventDefault();
-																								event
-																										.stopPropagation();
-																							}
-																							form.classList
-																									.add('was-validated');
-																						},
-																						false);
-																	});
-												}, false);
-							})();
-						</script>
-
-					</div>
-				</div>
-			</div>
-
-			<!-- The Terms and Conditions Modal -->
-			<div class="modal" id="tcModal">
-				<div class="modal-dialog">
-					<div class="modal-content">
-
-						<!-- Modal Header -->
-						<div class="modal-header">
-							<h4 class="modal-title">Terms and Conditions</h4>
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-						</div>
-
-						<!-- Modal body -->
-						<div class="modal-body">
-
-							<h3>Bla bla</h3>
-							<p>bli bla blupp</p>
-
-						</div>
 					</div>
 				</div>
 			</div>
@@ -605,11 +539,7 @@
 						</p>
 					</div>
 
-					<script>
-						$(document).ready(function() {
-							$('[data-toggle="popover"]').popover();
-						});
-					</script>
+
 
 					<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 						<!-- Links -->
@@ -633,29 +563,7 @@
 			</div>
 			<br />
 
-			<!-- The Impressum Modal -->
-			<div class="modal" id="impressumModal">
-				<div class="modal-dialog">
-					<div class="modal-content">
 
-						<!-- Modal Header -->
-						<div class="modal-header">
-							<h4 class="modal-title">Impressum</h4>
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-						</div>
-
-						<!-- Modal body -->
-						<div class="modal-body">
-
-							<h3>Rockaleta - Die Partyband GbR</h3>
-							<p>
-								Patrick Blum <br /> Neue Straße 1 <br /> 36419 Schleid
-							</p>
-
-						</div>
-					</div>
-				</div>
-			</div>
 
 			<div>
 				Developed by &nbsp; <a
@@ -667,6 +575,53 @@
 	</footer>
 	<!-- Footer -->
 
+
+	<!-- All Modals -->
+	<!-- The Terms and Conditions Modal -->
+	<div class="modal" id="tcModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Terms and Conditions</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+
+					<h3>Bla bla</h3>
+					<p>bli bla blupp</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- The Impressum Modal -->
+	<div class="modal" id="impressumModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Impressum</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+
+					<h3>Rockaleta - Die Partyband GbR</h3>
+					<p>
+						Patrick Blum <br /> Neue Straße 1 <br /> 36419 Schleid
+					</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
