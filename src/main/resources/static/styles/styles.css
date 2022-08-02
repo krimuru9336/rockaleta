@@ -215,6 +215,11 @@ input {
 	color: #fc6b03;
 }
 
+.popover {
+	color: white;
+	background-color: #ffbc8c;
+}
+
 .col-centered {
 	float: none;
 	margin: 0 auto;

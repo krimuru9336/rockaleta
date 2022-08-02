@@ -596,12 +596,20 @@
 							<a href="#!" class="footer-link">Instagram</a>
 						</p>
 						<p>
-							<a href="#!" class="footer-link">Email</a>
+							<a href="#!" class="footer-link" data-toggle="popover"
+								data-content="rockaleta.partyband@gmail.com">Email</a>
 						</p>
 						<p>
-							<a href="#!" class="footer-link">Phone</a>
+							<a href="#!" class="footer-link" data-toggle="popover"
+								data-content="+49-015150494800">Phone</a>
 						</p>
 					</div>
+
+					<script>
+						$(document).ready(function() {
+							$('[data-toggle="popover"]').popover();
+						});
+					</script>
 
 					<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 						<!-- Links -->
