@@ -185,6 +185,7 @@ a.nav-link:hover {
 
 .footer-banner {
 	margin-top: 3vh;
+	z-index: 1000;
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
