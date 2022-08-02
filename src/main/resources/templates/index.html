@@ -178,7 +178,7 @@
 				<h1>Gallery</h1>
 				<br>
 				<!-- Nav tabs -->
-				<ul class="nav nav-tabs" role="tablist">
+				<ul class="nav nav-tabs gallery-tab" role="tablist">
 					<li class="nav-item"><a class="nav-link active"
 						data-toggle="tab" href="#home">Urnshausen 2019</a></li>
 					<li class="nav-item"><a class="nav-link" data-toggle="tab"
@@ -390,26 +390,38 @@
 					<div class="col-md-4"></div>
 					<div class="col-md-6">
 						<form action="#" th:action="@{/saveContactForm}"
-							th:object="${contactForm}" method="post">
+							class="needs-validation" novalidate th:object="${contactForm}"
+							method="post">
 							<div class="row form-row">
 								<div class="col-md-2">Name:</div>
 								<div class="col-md-6">
-									<input class="input-box" type="text" autocomplete="off"
-										th:field="*{requestorName}" required />
+									<input class="input-box form-control" type="text"
+										autocomplete="off" th:field="*{requestorName}" required />
+									<div class="valid-feedback">Valid</div>
+									<div class="invalid-feedback">Please enter your name</div>
 								</div>
 							</div>
 							<div class="row form-row">
 								<div class="col-md-2">Email:</div>
 								<div class="col-md-6">
-									<input class="input-box" type="text" autocomplete="off"
+									<input class="input-box form-control" type="text"
+										autocomplete="off"
+										pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
 										th:field="*{email}" required />
+
+									<div class="valid-feedback">Valid</div>
+									<div class="invalid-feedback">Enter a valid email ID</div>
 								</div>
 							</div>
 							<div class="row form-row">
 								<div class="col-md-2">Phone:</div>
 								<div class="col-md-6">
-									<input class="input-box" type="text" autocomplete="off"
-										th:field="*{phoneNumber}" required />
+									<input class="input-box form-control" type="text"
+										pattern="^[0-9]*$" autocomplete="off"
+										th:field="*{phoneNumber}" />
+									<div class="valid-feedback">Valid</div>
+									<div class="invalid-feedback">Enter only characters for
+										phone number</div>
 								</div>
 							</div>
 							<div class="row form-row">
@@ -420,17 +432,66 @@
 								</div>
 							</div>
 							<div class="row form-row">
-								<label><input type="checkbox" name="isTermsAgreed"
-									required /> I agree to the <a data-target="#tcModal" href="#"
-									data-toggle="modal"> Terms and Conditions </a> </label>
+								<label class="form-check-label"> <input
+									class="form-check-input" type="checkbox" name="remember"
+									required /> I agree on blabla.
+									<div class="valid-feedback">Valid.</div>
+									<div class="invalid-feedback">Check this checkbox to
+										continue.</div>
+								</label>
 							</div>
 							<div class="row form-row">
 								<div class="col-md-4"></div>
 								<div class="col-md-2">
-									<button type="submit" class="btn submit-button glow-on-hover">Submit</button>
+									<button type="submit" class="btn submit-button">Submit</button>
 								</div>
 							</div>
 						</form>
+
+						<div>
+
+							<h2 th:text="${msg}"></h2>
+						</div>
+
+
+						<script>
+							// Disable form submissions if there are invalid fields
+							(function() {
+								'use strict';
+								window
+										.addEventListener(
+												'load',
+												function() {
+													// Get the forms we want to add validation styles to
+													var forms = document
+															.getElementsByClassName('needs-validation');
+													// Loop over them and prevent submission
+													var validation = Array.prototype.filter
+															.call(
+																	forms,
+																	function(
+																			form) {
+																		form
+																				.addEventListener(
+																						'submit',
+																						function(
+																								event) {
+																							if (form
+																									.checkValidity() === false) {
+																								event
+																										.preventDefault();
+																								event
+																										.stopPropagation();
+																							}
+																							form.classList
+																									.add('was-validated');
+																						},
+																						false);
+																	});
+												}, false);
+							})();
+						</script>
+
 					</div>
 				</div>
 			</div>
@@ -467,12 +528,13 @@
 							class="fa fa-facebook rounded-icon"></i></a>
 					</div>
 					<div class="icon">
-						<a target="_blank" href="#"> <i
-							class="fa fa-instagram rounded-icon"></i>
+						<a target="_blank"
+							href="https://www.facebook.com/Rockaleta-Die-Partyband-2280649342206833">
+							<i class="fa fa-instagram rounded-icon"></i>
 						</a>
 					</div>
 					<div class="icon">
-						<a target="_blank" 
+						<a target="_blank"
 							href="https://www.youtube.com/channel/UCI1UrvYZBBN_CJ3fw33pFPw">
 							<i class="fa fa-brands fa-youtube-play rounded-icon"></i>
 						</a>

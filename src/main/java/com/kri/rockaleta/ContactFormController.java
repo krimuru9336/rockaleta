@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class ContactFormController {
@@ -20,16 +21,14 @@ public class ContactFormController {
 	}
 
 	@PostMapping("/saveContactForm")
-	public String contactFormSubmit(@ModelAttribute ContactForm contactForm, Model model) {
+	public String contactFormSubmit(@ModelAttribute ContactForm contactForm, Model model,
+			RedirectAttributes redirectAttributes) {
 		model.addAttribute("contactForm", contactForm);
-		System.out.println("Data:" + contactForm.getPhoneNumber());
-
 		sendEmailFromContactFormData(contactForm.getRequestorName(), contactForm.getEmail(),
 				contactForm.getPhoneNumber(), contactForm.getNotes());
 
-		
-
 		System.out.println("In Controller Post");
+		redirectAttributes.addFlashAttribute("msg", "contact successful");
 
 		return "redirect:/#contact";
 	}
@@ -37,8 +36,8 @@ public class ContactFormController {
 	private void sendEmailFromContactFormData(String requestorName, String email, String phoneNumber, String notes) {
 		String emailBody = "Name: " + requestorName + "\n Email: " + email + "\n Phone Number: " + phoneNumber
 				+ "\n Notes: " + notes;
-		
-		emailSenderService.sendEmail(email, emailBody, "TEST!!!");
+		System.out.println("Email Body: " + emailBody);
+		emailSenderService.sendEmail(email, emailBody, "Test");
 
 	}
 }

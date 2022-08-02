@@ -15,14 +15,31 @@ body, .navbar, .nav, .navbar-nav, .tab-content {
 	font-size: 3vh;
 }
 
+a:hover {
+	color: white;
+	opacity: 0.7;
+}
+
 a, li {
 	background-color: black;
 	color: white;
 	font-family: straightFont;
 }
 
-li {
-	z-index: 3000;
+li, li.active {
+	background-color: black;
+	color: white;
+	z-index: 1000;
+}
+
+.nav-tabs .nav-link.active {
+	background-color: black;
+	color: white;
+}
+
+.active, .nav-link, .nav-item {
+	background-color: black;
+	color: white;
 }
 
 body {
@@ -76,17 +93,24 @@ a, .col-md-6, .col-md-4, .col-md-3, .col-md-2 {
 	margin-top: 15vh;
 }
 
-.carousel-image {
-	height: 90vh;
-	width: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
 .about-image {
 	padding: 15px;
 	width: 100%;
 	object-fit: cover;
+}
+
+a.nav-link:hover {
+	background-color: black;
+	color: red;
+	opacity: 1.0;
+}
+
+.nav-link.active {
+	background-color: red;
+}
+
+.gallery-tab {
+	border: none;
 }
 
 .tab-pane {
