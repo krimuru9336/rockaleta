@@ -28,7 +28,7 @@ public class ContactFormController {
 				contactForm.getPhoneNumber(), contactForm.getNotes());
 
 		System.out.println("In Controller Post");
-		redirectAttributes.addFlashAttribute("msg", "contact successful");
+		redirectAttributes.addFlashAttribute("msg", "Email ist gesendet! bla bla bla");
 
 		return "redirect:/#contact";
 	}

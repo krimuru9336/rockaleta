@@ -147,7 +147,22 @@ input {
 	border: none;
 }
 
-.input-box {
+.form-control {
+	outline: none;
+	border: none;
+	background-color: black;
+}
+
+.notes, .notes:focus {
+	color: white;
+	background-color: black;
+	border-bottom: 3px solid #fc6b03;
+	border-left: 1px solid #fc6b03;
+	border-right: 1px solid #fc6b03;
+	border-top: 1px solid #fc6b03;
+}
+
+.input-box, textarea, .input-box:focus {
 	color: white;
 	background-color: black;
 	border-bottom: 3px solid #fc6b03;
@@ -173,6 +188,10 @@ input {
 
 .submit-button:hover {
 	color: #fc6b03;
+}
+
+.confirmation-message {
+	color: #02ed41;
 }
 
 #footer {
