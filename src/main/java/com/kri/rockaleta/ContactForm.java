@@ -1,17 +1,10 @@
 package com.kri.rockaleta;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
 public class ContactForm {
 	private int id;
-	private String requestorName;
+	private String name;
 	private String email;
-	private String phoneNumber;
+	private String phone;
 	private String notes;
 	
 	public int getId() {
@@ -21,11 +14,11 @@ public class ContactForm {
 		this.id = id;
 	}
 	
-	public String getRequestorName() {
-		return requestorName;
+	public String getName() {
+		return name;
 	}
-	public void setRequestorName(String requestorName) {
-		this.requestorName = requestorName;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getEmail() {
 		return email;
@@ -33,11 +26,11 @@ public class ContactForm {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPhoneNumber() {
-		return phoneNumber;
+	public String getPhone() {
+		return phone;
 	}
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 	public String getNotes() {
 		return notes;

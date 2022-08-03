@@ -74,7 +74,8 @@
 					<li class="nav-item"><a class="nav-link" href="#band-members">Band
 							Members</a></li>
 					<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-					<li class="nav-item"><a class="nav-link" href="#footer">Useful Links</a></li>
+					<li class="nav-item"><a class="nav-link" href="#footer">Useful
+							Links</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -395,7 +396,7 @@
 								<div class="col-md-2">Name *:</div>
 								<div class="col-md-6">
 									<input class="input-box form-control" type="text"
-										autocomplete="off" th:field="*{requestorName}" required />
+										th:field="*{name}" required />
 
 									<div class="invalid-feedback">Please enter your name</div>
 								</div>
@@ -404,7 +405,6 @@
 								<div class="col-md-2">Email *:</div>
 								<div class="col-md-6">
 									<input class="input-box form-control" type="text"
-										autocomplete="off"
 										pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
 										th:field="*{email}" required />
 
@@ -416,8 +416,7 @@
 								<div class="col-md-2">Phone:</div>
 								<div class="col-md-6">
 									<input class="input-box form-control" type="text"
-										pattern="^[0-9]*$" autocomplete="off"
-										th:field="*{phoneNumber}" />
+										pattern="^[0-9]*$" autocomplete="off" th:field="*{phone}" />
 
 									<div class="invalid-feedback">Enter only characters for
 										phone number</div>
@@ -452,13 +451,19 @@
 							</div>
 
 							<br />
+
 							<div class="row">
 
 								<div class="col-md-2"></div>
 								<div class="col-md-6">
-									<p class="confirmation-message" th:text="${msg}"></p>
+									<!-- 	<p class="confirmation-message" th:value="${msg}"></p> 
+									<div class="confirmation-message">
+										<p th:text="${session.mySessionAttribute}"
+											th:unless="${session == null}">[...]</p>
+									</div> -->
 								</div>
 							</div>
+
 						</form>
 					</div>
 				</div>

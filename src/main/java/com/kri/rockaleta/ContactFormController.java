@@ -1,5 +1,7 @@
 package com.kri.rockaleta;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,21 +23,19 @@ public class ContactFormController {
 	}
 
 	@PostMapping("/saveContactForm")
-	public String contactFormSubmit(@ModelAttribute ContactForm contactForm, Model model,
-			RedirectAttributes redirectAttributes) {
+	public String contactFormSubmit(@ModelAttribute ContactForm contactForm, Model model) {
 		model.addAttribute("contactForm", contactForm);
-		sendEmailFromContactFormData(contactForm.getRequestorName(), contactForm.getEmail(),
-				contactForm.getPhoneNumber(), contactForm.getNotes());
+		sendEmailFromContactFormData(contactForm.getName(), contactForm.getEmail(), contactForm.getPhone(),
+				contactForm.getNotes());
 
 		System.out.println("In Controller Post");
-		redirectAttributes.addFlashAttribute("msg", "Email ist gesendet! bla bla bla");
+//		session.setAttribute("mySessionAttribute", "Email gesendet");
 
 		return "redirect:/#contact";
 	}
 
-	private void sendEmailFromContactFormData(String requestorName, String email, String phoneNumber, String notes) {
-		String emailBody = "Name: " + requestorName + "\n Email: " + email + "\n Phone Number: " + phoneNumber
-				+ "\n Notes: " + notes;
+	private void sendEmailFromContactFormData(String name, String email, String phone, String notes) {
+		String emailBody = "Name: " + name + "\n Email: " + email + "\n Phone Number: " + phone + "\n Notes: " + notes;
 		System.out.println("Email Body: " + emailBody);
 		emailSenderService.sendEmail(email, emailBody, "Test");
 
