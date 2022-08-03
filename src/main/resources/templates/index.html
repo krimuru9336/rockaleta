@@ -385,13 +385,18 @@
 			<div class="container">
 				<h1 class="title-text">Kontakt</h1>
 			</div>
+			<script type="text/javascript">
+				function myFunction() {
+					alert("email sent");
+				}
+			</script>
 			<div class="container-fluid justify-content-center	">
 				<div class="row">
 					<div class="col-md-4"></div>
 					<div class="col-md-6">
 						<form action="#" th:action="@{/saveContactForm}"
-							class="needs-validation" novalidate th:object="${contactForm}"
-							method="post">
+							onsubmit="myFunction()" class="needs-validation" novalidate
+							th:object="${contactForm}" method="post">
 							<div class="row form-row">
 								<div class="col-md-2">Name *:</div>
 								<div class="col-md-6">
@@ -407,8 +412,6 @@
 									<input class="input-box form-control" type="text"
 										pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
 										th:field="*{email}" required />
-
-
 									<div class="invalid-feedback">Enter a valid email ID</div>
 								</div>
 							</div>
@@ -425,10 +428,8 @@
 							<div class="row form-row">
 								<div class="col-md-2">Notes:</div>
 								<div class="col-md-6">
-
 									<textarea class="form-control notes" th:field="*{notes}"
 										rows="5" id="comment"></textarea>
-
 								</div>
 							</div>
 							<div class="row form-row">
@@ -449,21 +450,7 @@
 									<button type="submit" class="btn submit-button">Submit</button>
 								</div>
 							</div>
-
 							<br />
-
-							<div class="row">
-
-								<div class="col-md-2"></div>
-								<div class="col-md-6">
-									<!-- 	<p class="confirmation-message" th:value="${msg}"></p> 
-									<div class="confirmation-message">
-										<p th:text="${session.mySessionAttribute}"
-											th:unless="${session == null}">[...]</p>
-									</div> -->
-								</div>
-							</div>
-
 						</form>
 					</div>
 				</div>
