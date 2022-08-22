@@ -135,8 +135,8 @@
 
 					<div class="col-md-6 col-sm-12 col-xs-12">
 						<div class="about-image">
-							<img class="about-image" src="images/about-image.jpg"
-								alt="Card image cap">
+							<img class="about-image" src="../static/images/flori/img3.jpg"
+								th:src="@{images/flori/img3.jpg}" alt="Ruf Kri an!!">
 						</div>
 					</div>
 
@@ -183,20 +183,156 @@
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs gallery-tab" role="tablist">
 					<li class="nav-item"><a class="nav-link active"
-						data-toggle="tab" href="#home">Urnshausen 2019</a></li>
+						data-toggle="tab" href="#menu1">Boozi Bro</a></li>
 					<li class="nav-item"><a class="nav-link" data-toggle="tab"
-						href="#menu1">Erster Auftritt 2019</a></li>
+						href="#menu2">Flori</a></li>
 					<li class="nav-item"><a class="nav-link" data-toggle="tab"
-						href="#menu2">bla</a></li>
+						href="#menu3">Urnshausen 2019</a></li>
 				</ul>
 
 				<!-- Tab panes -->
 				<div class="tab-content">
-					<div id="home" class="container tab-pane active">
+					<div id="menu1" class="container tab-pane active">
 						<br />
 
+						<!-- Start Copy -->
 						<h3>Bilder</h3>
-						<div class="container-fluid" id="urns-container">
+						<div class="container-fluid" id="menu1-container">
+
+							<script type="text/javascript">
+								for (var i = 1; i <= 12; i++) {
+
+									var imgURL = "images/boozibro/img" + i
+											+ ".jpg"
+
+									if (i % 4 == 1) {
+										var rowElement = document
+												.createElement("div");
+										rowElement.className = "row";
+									}
+
+									var colElement = document
+											.createElement("div");
+									colElement.className = "col col-md-3";
+
+									var anchorElement = document
+											.createElement("a");
+									anchorElement.className = "fancybox";
+									anchorElement.href = imgURL;
+									anchorElement.setAttribute("data-fancybox",
+											"gallery1");
+
+									var imgElement = document
+											.createElement("img");
+									imgElement.className = "gallery-thumbnail";
+									imgElement.src = imgURL;
+
+									anchorElement.append(imgElement);
+									colElement.append(anchorElement);
+									rowElement.append(colElement);
+									document.getElementById("menu1-container")
+											.append(rowElement);
+
+								}
+							</script>
+
+							<br />
+
+							<h3>Videos</h3>
+
+							<div class="row">
+								<div class="col col-md-3">
+									<iframe class="gallery-thumbnail"
+										src="https://www.youtube.com/embed/QgszrxmOJFY"> </iframe>
+								</div>
+								<div class="col col-md-3">
+									<iframe class="gallery-thumbnail"
+										src="https://www.youtube.com/embed/QgszrxmOJFY"> </iframe>
+								</div>
+								<div class="col col-md-3">
+									<iframe class="gallery-thumbnail"
+										src="https://www.youtube.com/embed/QgszrxmOJFY"> </iframe>
+								</div>
+							</div>
+
+						</div>
+						<!-- end Copy -->
+
+
+					</div>
+					<div id="menu2" class="container tab-pane fade">
+						<br />
+
+						<!-- Start Copy -->
+						<h3>Bilder</h3>
+						<div class="container-fluid" id="menu2-container">
+
+							<script type="text/javascript">
+								for (var i = 1; i <= 8; i++) {
+
+									var imgURL = "images/flori/img" + i
+											+ ".jpg"
+
+									if (i % 4 == 1) {
+										var rowElement = document
+												.createElement("div");
+										rowElement.className = "row";
+									}
+
+									var colElement = document
+											.createElement("div");
+									colElement.className = "col col-md-3";
+
+									var anchorElement = document
+											.createElement("a");
+									anchorElement.className = "fancybox";
+									anchorElement.href = imgURL;
+									anchorElement.setAttribute("data-fancybox",
+											"gallery1");
+
+									var imgElement = document
+											.createElement("img");
+									imgElement.className = "gallery-thumbnail";
+									imgElement.src = imgURL;
+
+									anchorElement.append(imgElement);
+									colElement.append(anchorElement);
+									rowElement.append(colElement);
+									document.getElementById("menu2-container")
+											.append(rowElement);
+
+								}
+							</script>
+
+							<br />
+
+							<h3>Videos</h3>
+
+							<div class="row">
+								<div class="col col-md-3">
+									<iframe class="gallery-thumbnail"
+										src="https://www.youtube.com/embed/QgszrxmOJFY"> </iframe>
+								</div>
+								<div class="col col-md-3">
+									<iframe class="gallery-thumbnail"
+										src="https://www.youtube.com/embed/QgszrxmOJFY"> </iframe>
+								</div>
+								<div class="col col-md-3">
+									<iframe class="gallery-thumbnail"
+										src="https://www.youtube.com/embed/QgszrxmOJFY"> </iframe>
+								</div>
+							</div>
+
+						</div>
+						<!-- end Copy -->
+
+					</div>
+					<div id="menu3" class="container tab-pane fade">
+						<br />
+
+						<!-- Start Copy -->
+						<h3>Bilder</h3>
+						<div class="container-fluid" id="menu3-container">
 
 							<script type="text/javascript">
 								for (var i = 1; i <= 8; i++) {
@@ -231,7 +367,7 @@
 										colElement.append(anchorElement);
 										rowElement.append(colElement);
 										document.getElementById(
-												"urns-container").append(
+												"menu3-container").append(
 												rowElement);
 
 									} else {
@@ -260,14 +396,8 @@
 							</div>
 
 						</div>
+						<!-- end Copy -->
 
-
-					</div>
-					<div id="menu1" class="container tab-pane fade">
-						<br /> hi1
-					</div>
-					<div id="menu2" class="container tab-pane fade">
-						<br /> hi2
 					</div>
 				</div>
 			</div>
@@ -587,7 +717,7 @@
 				</div>
 
 				<!-- Modal body -->
-				<div class="modal-body"> 	
+				<div class="modal-body">
 
 					<h3>Bla bla</h3>
 					<p>bli bla blupp</p>
