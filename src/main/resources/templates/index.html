@@ -191,11 +191,14 @@
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs gallery-tab" role="tablist">
 					<li class="nav-item"><a class="nav-link active"
-						data-toggle="tab" href="#menu1">Boozi Bro</a></li>
+						data-toggle="tab" href="#menu1">Daniel und Barbara Polter
+							Abend</a></li>
 					<li class="nav-item"><a class="nav-link" data-toggle="tab"
-						href="#menu2">Flori</a></li>
+						href="#menu2">Flori, Ev, Marcus</a></li>
 					<li class="nav-item"><a class="nav-link" data-toggle="tab"
 						href="#menu3">Urnshausen 2019</a></li>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab"
+						href="#menu4">Erster Auftritt</a></li>
 				</ul>
 
 				<!-- Tab panes -->
@@ -410,6 +413,77 @@
 						<!-- end Copy -->
 
 					</div>
+
+					<div id="menu4" class="container tab-pane fade">
+						<br />
+
+						<!-- Start Copy -->
+						<h3>Bilder</h3>
+						<div class="container-fluid" id="menu4-container">
+
+							<script type="text/javascript">
+								for (var i = 1; i <= 11; i++) {
+
+									var imgURL = "images/erster/img" + i
+											+ ".jpg"
+
+									if (i % 4 == 1) {
+										var rowElement = document
+												.createElement("div");
+										rowElement.className = "row";
+									}
+
+									var colElement = document
+											.createElement("div");
+									colElement.className = "col col-md-3";
+
+									var anchorElement = document
+											.createElement("a");
+									anchorElement.className = "fancybox";
+									anchorElement.href = imgURL;
+									anchorElement.setAttribute("data-fancybox",
+											"gallery1");
+
+									var imgElement = document
+											.createElement("img");
+									imgElement.className = "gallery-thumbnail";
+									imgElement.src = imgURL;
+									imgElement.style.border = "4px solid white";
+
+									anchorElement.append(imgElement);
+									colElement.append(anchorElement);
+									rowElement.append(colElement);
+									document.getElementById("menu4-container")
+											.append(rowElement);
+
+								}
+							</script>
+
+							<br />
+
+							<h3>Videos</h3>
+
+							<div class="row">
+								<div class="col col-md-3">
+									<iframe class="gallery-thumbnail"
+										src="https://www.youtube.com/embed/QgszrxmOJFY"> </iframe>
+								</div>
+								<div class="col col-md-3">
+									<iframe class="gallery-thumbnail"
+										src="https://www.youtube.com/embed/QgszrxmOJFY"> </iframe>
+								</div>
+								<div class="col col-md-3">
+									<iframe class="gallery-thumbnail"
+										src="https://www.youtube.com/embed/QgszrxmOJFY"> </iframe>
+								</div>
+							</div>
+
+						</div>
+						<!-- end Copy -->
+
+					</div>
+
+
 				</div>
 			</div>
 		</section>
