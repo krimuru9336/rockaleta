@@ -753,13 +753,16 @@
 								class="footer-link">Impressum</a>
 						</p>
 						<p>
-							<a href="#!" class="footer-link">Dantenschutz</a>
+							<a data-target="#privacyModal" href="#" data-toggle="modal"
+								class="footer-link">Dantenschutz</a>
 						</p>
 						<p>
-							<a href="#!" class="footer-link">Cloud</a>
+							<a data-target="#cloudModal" href="#" data-toggle="modal"
+								class="footer-link">Cloud</a>
 						</p>
 						<p>
-							<a href="#!" class="footer-link">Developer Policy</a>
+							<a data-target="#developerModal" data-toggle="modal" href="#"
+								class="footer-link">Developer Policy</a>
 						</p>
 					</div>
 				</div>
@@ -797,9 +800,18 @@
 
 				<!-- Modal body -->
 				<div class="modal-body">
-
-					<h3>Bla bla</h3>
-					<p>bli bla blupp</p>
+					<p>
+						EN--------------------------------- <br /> With this consent you
+						agree to share the above filled data with us. Rockaleta and the
+						developer will only use this data in the email chain that we have
+						established with you. Your data will be stored as per the policies
+						of AWS EC2 Instance. <br /> DE--------------------------------- <br />
+						Mit dieser Einwilligung stimmen Sie der Weitergabe der oben
+						ausgefüllten Daten mit uns zu teilen. Rockaleta und der Entwickler
+						werden diese Daten nur in der der E-Mail-Kette, die wir mit Ihnen
+						eingerichtet haben. Ihre Daten werden werden gemäß den Richtlinien
+						der AWS EC2 Instanz gespeichert.
+					</p>
 
 				</div>
 			</div>
@@ -824,6 +836,85 @@
 					<h4>
 						Patrick Blum <br /> Neue Straße 1 <br /> 36419 Schleid
 					</h4>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- The Developer Modal -->
+	<div class="modal" id="developerModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Developer's Policy</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+
+
+					<h4>This application was developed voluntarily with no
+						financial gain. If you find any bugs or have difficulty with the
+						design please get in touch with me: kritikamurugan@gmail.com</h4>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- The Cloud Modal -->
+	<div class="modal" id="cloudModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Cloud</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+
+
+					<h4>This application is currently deployed to AWS with the
+						free tier of EC2 Instance. All policies and terms and conditions
+						are that of AWS. We do not use any cookies. Rockaleta and the
+						developer are not responsible for your data. We only use this data
+						in the email service offered as a library in Java</h4>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- The Cloud Modal -->
+	<div class="modal" id="privacyModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Datenschutz/Privacy Policy</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+
+
+					<h4>We do not use cookies. The data you provide is sent to you
+						as an email, hence it is completely transparent. Rockaleta and the
+						developer will not share you data to anyone else without your
+						prior consent through any means including WhatsApp and email. Your
+						data is stored in AWS EC2 Instance as per the policy of AWS.
+						Rockaleta and the developer are not responsible for your data
+						apart from the email chain that has you looped in with the valid
+						email address that you have provided.</h4>
 
 				</div>
 			</div>
