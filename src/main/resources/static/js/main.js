@@ -27,6 +27,9 @@
 											event
 												.stopPropagation();
 										}
+										else {
+											alert("successful");
+										}
 										form.classList
 											.add('was-validated');
 									},
