@@ -599,19 +599,14 @@
 			<div class="container">
 				<h1 class="title-text">Kontakt</h1>
 			</div>
-			<script type="text/javascript">
-				function myFunction() {
-					var name = document.getElementByID("name")[0].value;
-					alert("name: " + name);
-				}
-			</script>
+
 			<div class="container-fluid justify-content-center	">
 				<div class="row">
 					<div class="col-md-4"></div>
 					<div class="col-md-6">
 						<form action="#" th:action="@{/saveContactForm}"
-							onsubmit="myFunction()" class="needs-validation" novalidate
-							th:object="${contactForm}" method="post">
+							class="needs-validation" novalidate th:object="${contactForm}"
+							method="post">
 							<div class="row form-row">
 								<div class="col-md-2">Name *:</div>
 								<div class="col-md-6">
@@ -651,10 +646,10 @@
 							</div>
 							<div class="row form-row">
 								<div class="col-md-2"></div>
-								<div class="col-md-6">
+								<div class="col-md-6" style="padding-left: 3vh;">
 									<label class="form-check-label"> <input
 										class="form-check-input" type="checkbox" name="remember"
-										required /> Ich bestatige die <a data-target="#tcModal"
+										required /> Ich bestätige die <a data-target="#tcModal"
 										href="#" data-toggle="modal"> unverbindliche
 											Kontaktaufnahme </a>
 										<div class="invalid-feedback">Bitte bestatigen Sie die
